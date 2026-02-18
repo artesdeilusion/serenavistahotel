@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 
 import './globals.css'
+import Script from 'next/script'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -39,7 +40,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+       
+          <Script
+          src="https://api.reservoice.com/chatbox.js" 
+          data-hotel-id="123"
+          data-api-url="https://api.reservoice.com"
+            strategy="lazyOnload"
+          />
+      
+      </body>
     </html>
   )
 }

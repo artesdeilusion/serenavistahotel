@@ -72,11 +72,11 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden transition-all pt-4 duration-500 lg:hidden ${
-          isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden transition-all duration-500 lg:hidden ${
+          isMobileMenuOpen ? "max-h-[400px] opacity-100 mt-3" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col gap-1 bg-primary/95 px-6 pb-6 pt-2 backdrop-blur-sm">
+        <ul className="flex flex-col gap-1   bg-primary/95 px-6 pb-6 pt-2 backdrop-blur-sm">
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
