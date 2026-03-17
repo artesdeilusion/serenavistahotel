@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 
 import './globals.css'
 import Script from 'next/script'
+import { RetellCallButton } from '@/components/RetellCallButton'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -42,11 +43,12 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         {children}
+        <RetellCallButton />
        
           <Script
           src="https://api.reservoice.com/chatbox.js" 
           data-hotel-id="123"
-          data-api-url="https://api.reservoice.com"
+          data-api-url="https://api.resservoice.com"
             strategy="lazyOnload"
           />
       
